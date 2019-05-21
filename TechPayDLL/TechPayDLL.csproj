@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A5BDED62-03E0-413C-AA30-16E25BC84552}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TechPayDLL</RootNamespace>
+    <AssemblyName>TechPayDLL</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NewEventLogDLL">
+      <HintPath>..\..\Blue Jay Class Library\NewEventLogDLL.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FindSortedTechPayItemByCodeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindSortedTechPayItemByCodeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindSortedTechPayItemByJobDescriptionDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindSortedTechPayItemByJobDescriptionDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindTechPayItemByCodeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindTechPayItemByCodeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindTechPayItemByDescriptionDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindTechPayItemByDescriptionDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertTechPayItemEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertTechPayItemEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="TechPayClass.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TechPayItemDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TechPayItemDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateTechPayItemPriceEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateTechPayItemPriceEntry.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="FindSortedTechPayItemByCodeDataSet.xsc">
+      <DependentUpon>FindSortedTechPayItemByCodeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindSortedTechPayItemByCodeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindSortedTechPayItemByCodeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindSortedTechPayItemByCodeDataSet.xss">
+      <DependentUpon>FindSortedTechPayItemByCodeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindSortedTechPayItemByJobDescriptionDataSet.xsc">
+      <DependentUpon>FindSortedTechPayItemByJobDescriptionDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindSortedTechPayItemByJobDescriptionDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindSortedTechPayItemByJobDescriptionDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindSortedTechPayItemByJobDescriptionDataSet.xss">
+      <DependentUpon>FindSortedTechPayItemByJobDescriptionDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindTechPayItemByCodeDataSet.xsc">
+      <DependentUpon>FindTechPayItemByCodeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindTechPayItemByCodeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindTechPayItemByCodeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindTechPayItemByCodeDataSet.xss">
+      <DependentUpon>FindTechPayItemByCodeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindTechPayItemByDescriptionDataSet.xsc">
+      <DependentUpon>FindTechPayItemByDescriptionDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindTechPayItemByDescriptionDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindTechPayItemByDescriptionDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindTechPayItemByDescriptionDataSet.xss">
+      <DependentUpon>FindTechPayItemByDescriptionDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="InsertTechPayItemEntry.xsc">
+      <DependentUpon>InsertTechPayItemEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertTechPayItemEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertTechPayItemEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertTechPayItemEntry.xss">
+      <DependentUpon>InsertTechPayItemEntry.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="TechPayItemDataSet.xsc">
+      <DependentUpon>TechPayItemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TechPayItemDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TechPayItemDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TechPayItemDataSet.xss">
+      <DependentUpon>TechPayItemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateTechPayItemPriceEntry.xsc">
+      <DependentUpon>UpdateTechPayItemPriceEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateTechPayItemPriceEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateTechPayItemPriceEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateTechPayItemPriceEntry.xss">
+      <DependentUpon>UpdateTechPayItemPriceEntry.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
