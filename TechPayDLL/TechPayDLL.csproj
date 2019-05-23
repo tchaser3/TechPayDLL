@@ -44,6 +44,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FindEmployeeTechPayByDateRangeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindEmployeeTechPayByDateRangeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindManagerEmployeeTechPayDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindManagerEmployeeTechPayDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindProjectTechPayByProjectIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindProjectTechPayByProjectIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindProjectTechPayTotalsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindProjectTechPayTotalsDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FindSortedTechPayItemByCodeDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -64,10 +84,20 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FindTechPayItemByDescriptionDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="InsertProjectTechPayItemEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertProjectTechPayItemEntry.xsd</DependentUpon>
+    </Compile>
     <Compile Include="InsertTechPayItemEntry.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>InsertTechPayItemEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectTechPayItemsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProjectTechPayItemsDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -81,6 +111,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TechPayItemDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="UpdateProjectTechPayItemEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateProjectTechPayItemEntry.xsd</DependentUpon>
+    </Compile>
     <Compile Include="UpdateTechPayItemPriceEntry.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -89,6 +124,50 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="FindEmployeeTechPayByDateRangeDataSet.xsc">
+      <DependentUpon>FindEmployeeTechPayByDateRangeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindEmployeeTechPayByDateRangeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindEmployeeTechPayByDateRangeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindEmployeeTechPayByDateRangeDataSet.xss">
+      <DependentUpon>FindEmployeeTechPayByDateRangeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindManagerEmployeeTechPayDataSet.xsc">
+      <DependentUpon>FindManagerEmployeeTechPayDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindManagerEmployeeTechPayDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindManagerEmployeeTechPayDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindManagerEmployeeTechPayDataSet.xss">
+      <DependentUpon>FindManagerEmployeeTechPayDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindProjectTechPayByProjectIDDataSet.xsc">
+      <DependentUpon>FindProjectTechPayByProjectIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindProjectTechPayByProjectIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindProjectTechPayByProjectIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindProjectTechPayByProjectIDDataSet.xss">
+      <DependentUpon>FindProjectTechPayByProjectIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindProjectTechPayTotalsDataSet.xsc">
+      <DependentUpon>FindProjectTechPayTotalsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindProjectTechPayTotalsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindProjectTechPayTotalsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindProjectTechPayTotalsDataSet.xss">
+      <DependentUpon>FindProjectTechPayTotalsDataSet.xsd</DependentUpon>
+    </None>
     <None Include="FindSortedTechPayItemByCodeDataSet.xsc">
       <DependentUpon>FindSortedTechPayItemByCodeDataSet.xsd</DependentUpon>
     </None>
@@ -133,6 +212,17 @@
     <None Include="FindTechPayItemByDescriptionDataSet.xss">
       <DependentUpon>FindTechPayItemByDescriptionDataSet.xsd</DependentUpon>
     </None>
+    <None Include="InsertProjectTechPayItemEntry.xsc">
+      <DependentUpon>InsertProjectTechPayItemEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertProjectTechPayItemEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertProjectTechPayItemEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertProjectTechPayItemEntry.xss">
+      <DependentUpon>InsertProjectTechPayItemEntry.xsd</DependentUpon>
+    </None>
     <None Include="InsertTechPayItemEntry.xsc">
       <DependentUpon>InsertTechPayItemEntry.xsd</DependentUpon>
     </None>
@@ -143,6 +233,17 @@
     </None>
     <None Include="InsertTechPayItemEntry.xss">
       <DependentUpon>InsertTechPayItemEntry.xsd</DependentUpon>
+    </None>
+    <None Include="ProjectTechPayItemsDataSet.xsc">
+      <DependentUpon>ProjectTechPayItemsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ProjectTechPayItemsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProjectTechPayItemsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProjectTechPayItemsDataSet.xss">
+      <DependentUpon>ProjectTechPayItemsDataSet.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -158,6 +259,17 @@
     </None>
     <None Include="TechPayItemDataSet.xss">
       <DependentUpon>TechPayItemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateProjectTechPayItemEntry.xsc">
+      <DependentUpon>UpdateProjectTechPayItemEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateProjectTechPayItemEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateProjectTechPayItemEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateProjectTechPayItemEntry.xss">
+      <DependentUpon>UpdateProjectTechPayItemEntry.xsd</DependentUpon>
     </None>
     <None Include="UpdateTechPayItemPriceEntry.xsc">
       <DependentUpon>UpdateTechPayItemPriceEntry.xsd</DependentUpon>
