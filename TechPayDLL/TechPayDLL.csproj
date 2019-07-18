@@ -59,6 +59,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FindProjectTechPayByProjectIDDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FindProjectTechPayItemByDAteTimeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindProjectTechPayItemByDAteTimeDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FindProjectTechPayTotalsDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -116,6 +121,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>UpdateProjectTechPayItemEntry.xsd</DependentUpon>
     </Compile>
+    <Compile Include="UpdateProjectTechPayPoleStickEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateProjectTechPayPoleStickEntry.xsd</DependentUpon>
+    </Compile>
     <Compile Include="UpdateTechPayItemPriceEntry.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -156,6 +166,17 @@
     </None>
     <None Include="FindProjectTechPayByProjectIDDataSet.xss">
       <DependentUpon>FindProjectTechPayByProjectIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindProjectTechPayItemByDAteTimeDataSet.xsc">
+      <DependentUpon>FindProjectTechPayItemByDAteTimeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindProjectTechPayItemByDAteTimeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindProjectTechPayItemByDAteTimeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindProjectTechPayItemByDAteTimeDataSet.xss">
+      <DependentUpon>FindProjectTechPayItemByDAteTimeDataSet.xsd</DependentUpon>
     </None>
     <None Include="FindProjectTechPayTotalsDataSet.xsc">
       <DependentUpon>FindProjectTechPayTotalsDataSet.xsd</DependentUpon>
@@ -270,6 +291,17 @@
     </None>
     <None Include="UpdateProjectTechPayItemEntry.xss">
       <DependentUpon>UpdateProjectTechPayItemEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateProjectTechPayPoleStickEntry.xsc">
+      <DependentUpon>UpdateProjectTechPayPoleStickEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateProjectTechPayPoleStickEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateProjectTechPayPoleStickEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateProjectTechPayPoleStickEntry.xss">
+      <DependentUpon>UpdateProjectTechPayPoleStickEntry.xsd</DependentUpon>
     </None>
     <None Include="UpdateTechPayItemPriceEntry.xsc">
       <DependentUpon>UpdateTechPayItemPriceEntry.xsd</DependentUpon>

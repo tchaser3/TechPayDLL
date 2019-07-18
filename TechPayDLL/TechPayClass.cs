@@ -55,6 +55,44 @@ namespace TechPayDLL
         FindManagerEmployeeTechPayDataSet aFindManagerEmployeeTechPayDataSet;
         FindManagerEmployeeTechPayDataSetTableAdapters.FindManagerEmployeeTechPayTableAdapter aFindManagerEmployeeTechPayTableAdapter;
 
+        FindProjectTechPayItemByDAteTimeDataSet aFindProjectTechPayItemByDateTimeDataSet;
+        FindProjectTechPayItemByDAteTimeDataSetTableAdapters.FindProjectTechPayItemByDateTimeTableAdapter aFindProjectTechPayItemByDateTimeTableAdapter;
+
+        UpdateProjectTechPayPoleStickEntryTableAdapters.QueriesTableAdapter aUpdateProjectTechPayPoleStickTableAdapter;
+
+        public bool UpdateProjectTechPayPoleStick(int intTransactionID, bool blnPoleStick)
+        {
+            bool blnFatalError = false;
+
+            try
+            {
+                aUpdateProjectTechPayPoleStickTableAdapter = new UpdateProjectTechPayPoleStickEntryTableAdapters.QueriesTableAdapter();
+                aUpdateProjectTechPayPoleStickTableAdapter.UpdateProjectTechPayPoleStick(intTransactionID, blnPoleStick);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Tech Pay Class // Udpate Project Tech Pay Pole Stick " + Ex.Message);
+
+                blnFatalError = true;
+            }
+
+            return blnFatalError;
+        }
+        public FindProjectTechPayItemByDAteTimeDataSet FindProjectTechPayItemsByDateTime(DateTime datTransactionDate)
+        {
+            try
+            {
+                aFindProjectTechPayItemByDateTimeDataSet = new FindProjectTechPayItemByDAteTimeDataSet();
+                aFindProjectTechPayItemByDateTimeTableAdapter = new FindProjectTechPayItemByDAteTimeDataSetTableAdapters.FindProjectTechPayItemByDateTimeTableAdapter();
+                aFindProjectTechPayItemByDateTimeTableAdapter.Fill(aFindProjectTechPayItemByDateTimeDataSet.FindProjectTechPayItemByDateTime, datTransactionDate);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Tech Pay Class // Find Project Tech Pay Items By Date Time " + Ex.Message);
+            }
+
+            return aFindProjectTechPayItemByDateTimeDataSet;
+        }
         public FindManagerEmployeeTechPayDataSet FindManagerEmployeeTechPay(int intManagerID, DateTime datStartDate, DateTime datEndDate)
         {
             try
@@ -133,14 +171,14 @@ namespace TechPayDLL
 
             return blnFatalError;
         }
-        public bool InsertProjectTechpayItem(int intProjectID, bool blnIsConstruction, string strProjectType, int intEmployeeID, int intWarehouseID, int intTechPayID, decimal decTechPayPrice, int intQuantity, decimal decTotalTechPayPrice)
+        public bool InsertProjectTechpayItem(int intProjectID, bool blnIsConstruction, string strProjectType, int intEmployeeID, int intWarehouseID, int intTechPayID, decimal decTechPayPrice, int intQuantity, decimal decTotalTechPayPrice, DateTime datTransactionDate)
         {
             bool blnFatalError = false;
 
             try
             {
                 aInsertProjectTechPayItemTableAdapter = new InsertProjectTechPayItemEntryTableAdapters.QueriesTableAdapter();
-                aInsertProjectTechPayItemTableAdapter.InsertProjectTechPayItem(intProjectID, blnIsConstruction, strProjectType, intEmployeeID, intWarehouseID, intTechPayID, decTechPayPrice, intQuantity, decTotalTechPayPrice, DateTime.Now);
+                aInsertProjectTechPayItemTableAdapter.InsertProjectTechPayItem(intProjectID, blnIsConstruction, strProjectType, intEmployeeID, intWarehouseID, intTechPayID, decTechPayPrice, intQuantity, decTotalTechPayPrice, datTransactionDate);
             }
             catch (Exception Ex)
             {
