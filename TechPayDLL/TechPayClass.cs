@@ -60,6 +60,24 @@ namespace TechPayDLL
 
         UpdateProjectTechPayPoleStickEntryTableAdapters.QueriesTableAdapter aUpdateProjectTechPayPoleStickTableAdapter;
 
+        FindProjectTechPayItemsTotalsByProjectIDDataSet aFindProjectTechPayItemsTotalsByProjectIDDataSet;
+        FindProjectTechPayItemsTotalsByProjectIDDataSetTableAdapters.FindProjectTechPayItemsTotalsByProjectIDTableAdapter aFindProjectTechPayItemsTotalsByProjectIDTableAdapter;
+
+        public FindProjectTechPayItemsTotalsByProjectIDDataSet FindProjectTechPayItemsTotalsByProjectID(int intProjectID)
+        {
+            try
+            {
+                aFindProjectTechPayItemsTotalsByProjectIDDataSet = new FindProjectTechPayItemsTotalsByProjectIDDataSet();
+                aFindProjectTechPayItemsTotalsByProjectIDTableAdapter = new FindProjectTechPayItemsTotalsByProjectIDDataSetTableAdapters.FindProjectTechPayItemsTotalsByProjectIDTableAdapter();
+                aFindProjectTechPayItemsTotalsByProjectIDTableAdapter.Fill(aFindProjectTechPayItemsTotalsByProjectIDDataSet.FindProjectTechPayItemsTotalsByProjectID, intProjectID);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Tech Pay Class // Find Project Tech Pay Items Totals By Project ID " + Ex.Message);
+            }
+
+            return aFindProjectTechPayItemsTotalsByProjectIDDataSet;
+        }
         public bool UpdateProjectTechPayPoleStick(int intTransactionID, bool blnPoleStick)
         {
             bool blnFatalError = false;
